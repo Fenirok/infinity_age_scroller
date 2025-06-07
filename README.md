@@ -5,7 +5,7 @@
 
 A highly customizable and smooth infinite age picker widget for Flutter that provides seamless scrolling through age values with multiple orientations.
 
-![Image](https://github.com/user-attachments/assets/254bc590-c884-419e-a8f1-90a356bba361)
+![Image](https://github.com/user-attachments/assets/c54efcaa-a184-481c-bae2-0bcbc6a77c88)
 
 *Experience smooth infinite scrolling with multiple orientations*
 
