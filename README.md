@@ -5,6 +5,7 @@
 
 A highly customizable and smooth infinite age picker widget for Flutter that provides seamless scrolling through age values with multiple orientations.
 
+![Demo Video](https://your-video-url-here.gif)
 
 *Experience smooth infinite scrolling with multiple orientations*
 
@@ -48,11 +49,12 @@ import 'package:infinity_age_scroller/infinity_age_scroller.dart';
 The simplest way to use InfinityAgeScroller:
 
 ```dart
+
 InfinityAgeScroller(
-onAgeSelected: (age) {
-print('Selected age: $age');
-},
-scrollDirection: ScrollDirection.vertical,
+  onAgeSelected: (age) {
+    print('Selected age: $age');
+  },
+  scrollDirection: ScrollDirection.vertical,
 )
 ```
 
@@ -62,13 +64,13 @@ Define your own age range:
 
 ```dart
 InfinityAgeScroller(
-onAgeSelected: (age) {
-setState(() => selectedAge = age);
-},
-minAge: 18,
-maxAge: 65,
-initialAge: 25,
-scrollDirection: ScrollDirection.vertical,
+  onAgeSelected: (age) {
+    setState(() => selectedAge = age);
+  },
+  minAge: 18,
+  maxAge: 65,
+  initialAge: 25,
+  scrollDirection: ScrollDirection.vertical,
 )
 ```
 
@@ -78,11 +80,11 @@ Create a horizontal age picker:
 
 ```dart
 InfinityAgeScroller(
-onAgeSelected: (age) => updateAge(age),
-scrollDirection: ScrollDirection.horizontal,
-itemExtent: 80.0,
-selectedTextColor: Colors.blue,
-unselectedTextColor: Colors.grey.shade400,
+  onAgeSelected: (age) => updateAge(age),
+  scrollDirection: ScrollDirection.horizontal,
+  itemExtent: 80.0,
+  selectedTextColor: Colors.blue,
+  unselectedTextColor: Colors.grey.shade400,
 )
 ```
 
@@ -92,11 +94,11 @@ Create a stunning diagonal age picker:
 
 ```dart
 InfinityAgeScroller(
-onAgeSelected: (age) => handleAgeSelection(age),
-scrollDirection: ScrollDirection.leftDiagonal, // or rightDiagonal
-curveOfScroll: 1.5,
-selectedTextColor: Colors.purple,
-itemExtent: 70.0,
+  onAgeSelected: (age) => handleAgeSelection(age),
+  scrollDirection: ScrollDirection.leftDiagonal, // or rightDiagonal
+  curveOfScroll: 1.5,
+  selectedTextColor: Colors.purple,
+  itemExtent: 70.0,
 )
 ```
 
@@ -151,27 +153,27 @@ enum ScrollDirection {
 ### Color Theming
 ```dart
 InfinityAgeScroller(
-selectedTextColor: Colors.deepPurple,
-unselectedTextColor: Colors.grey.shade300,
-// ... other parameters
+  selectedTextColor: Colors.deepPurple,
+  unselectedTextColor: Colors.grey.shade300,
+  // ... other parameters
 )
 ```
 
 ### Adjust Wheel Curvature
 ```dart
 InfinityAgeScroller(
-curveOfScroll: 1.0, // More curved wheel effect
-// or
-curveOfScroll: 4.0, // Flatter, more linear appearance
+  curveOfScroll: 1.0, // More curved wheel effect
+  // or
+  curveOfScroll: 4.0, // Flatter, more linear appearance
 )
 ```
 
 ### Item Sizing
 ```dart
 InfinityAgeScroller(
-itemExtent: 80.0, // Larger items with more spacing
-// or  
-itemExtent: 40.0, // Compact, tightly packed items
+  itemExtent: 80.0, // Larger items with more spacing
+  // or  
+  itemExtent: 40.0, // Compact, tightly packed items
 )
 ```
 
@@ -181,12 +183,12 @@ itemExtent: 40.0, // Compact, tightly packed items
 ```dart
 // Perfect for registration forms
 FormField<int>(
-initialValue: 25,
-builder: (field) => InfinityAgeScroller(
-initialAge: field.value,
-onAgeSelected: field.didChange,
-scrollDirection: ScrollDirection.vertical,
-),
+  initialValue: 25,
+  builder: (field) => InfinityAgeScroller(
+    initialAge: field.value,
+    onAgeSelected: field.didChange,
+    scrollDirection: ScrollDirection.vertical,
+  ),
 )
 ```
 
@@ -194,20 +196,20 @@ scrollDirection: ScrollDirection.vertical,
 ```dart
 // Combine multiple pickers horizontally
 Row(
-children: [
-Expanded(
-child: InfinityAgeScroller(
-scrollDirection: ScrollDirection.vertical,
-onAgeSelected: (age) => setState(() => age1 = age),
-),
-),
-Expanded(
-child: InfinityAgeScroller(
-scrollDirection: ScrollDirection.vertical,
-onAgeSelected: (age) => setState(() => age2 = age),
-),
-),
-],
+  children: [
+    Expanded(
+      child: InfinityAgeScroller(
+        scrollDirection: ScrollDirection.vertical,
+        onAgeSelected: (age) => setState(() => age1 = age),
+      ),
+    ),
+    Expanded(
+      child: InfinityAgeScroller(
+        scrollDirection: ScrollDirection.vertical,
+        onAgeSelected: (age) => setState(() => age2 = age),
+      ),
+    ),
+  ],
 )
 ```
 
@@ -215,9 +217,9 @@ onAgeSelected: (age) => setState(() => age2 = age),
 ```dart
 // Automatically adapt to app theme
 InfinityAgeScroller(
-selectedTextColor: Theme.of(context).primaryColor,
-unselectedTextColor: Theme.of(context).textTheme.bodyMedium?.color?.withOpacity(0.6),
-scrollDirection: ScrollDirection.horizontal,
+  selectedTextColor: Theme.of(context).primaryColor,
+  unselectedTextColor: Theme.of(context).textTheme.bodyMedium?.color?.withOpacity(0.6),
+  scrollDirection: ScrollDirection.horizontal,
 )
 ```
 
