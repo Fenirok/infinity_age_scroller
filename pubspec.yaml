@@ -1,6 +1,7 @@
 name: infinity_age_scroller
-description: "A simple and customizable infinite age scroller widget for Flutter."
+description: A simple and customizable infinite age scroller widget for Flutter.
 version: 1.0.0
+
 homepage: https://github.com/Fenirok/infinity_age_scroller
 repository: https://github.com/Fenirok/infinity_age_scroller
 issue_tracker: https://github.com/Fenirok/infinity_age_scroller/issues
