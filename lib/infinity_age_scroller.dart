@@ -222,8 +222,8 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
 
     // Apply default values for any unspecified parameters
     // These defaults provide a reasonable age range for most applications
-    int minAge = widget.minAge ?? 18;        // Legal adult age in most countries
-    int maxAge = widget.maxAge ?? 100;       // Reasonable maximum human age
+    int minAge = widget.minAge ?? 18; // Legal adult age in most countries
+    int maxAge = widget.maxAge ?? 100; // Reasonable maximum human age
     int initialAge = widget.initialAge ?? 25; // Young adult default
 
     // Set the initial selected age for highlighting purposes
@@ -232,11 +232,12 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
     // Calculate the initial scroll position to center the initial age
     // This complex calculation ensures the initial age appears in the center
     // of the scroller when the widget first loads
-    int ageRange = maxAge - minAge + 1;                    // Total number of different ages
-    int targetAgeIndex = initialAge - minAge;              // Index of initial age within range
-    int initialIndex = (_totalItems ~/ 2) -                // Start from middle of total items
-        ((_totalItems ~/ 2) % ageRange) +                 // Align to age cycle boundary
-        targetAgeIndex;                                    // Offset to target age
+    int ageRange = maxAge - minAge + 1; // Total number of different ages
+    int targetAgeIndex =
+        initialAge - minAge; // Index of initial age within range
+    int initialIndex = (_totalItems ~/ 2) - // Start from middle of total items
+        ((_totalItems ~/ 2) % ageRange) + // Align to age cycle boundary
+        targetAgeIndex; // Offset to target age
 
     // Create the scroll controller with the calculated initial position
     _scrollController = FixedExtentScrollController(initialItem: initialIndex);
@@ -269,8 +270,8 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
   Widget build(BuildContext context) {
     // Extract configuration values, applying defaults for consistency
     // These values are used by all scroller implementations
-    int minAge = widget.minAge ?? 18;           // Minimum selectable age
-    int maxAge = widget.maxAge ?? 100;          // Maximum selectable age
+    int minAge = widget.minAge ?? 18; // Minimum selectable age
+    int maxAge = widget.maxAge ?? 100; // Maximum selectable age
     double itemExtent = widget.itemExtent ?? 60.0; // Size of each age item
 
     // Route to the appropriate builder method based on scroll direction
@@ -282,7 +283,8 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
       case ScrollDirection.leftDiagonal:
         return _buildDiagonalScroller(minAge, maxAge, itemExtent, isLeft: true);
       case ScrollDirection.rightDiagonal:
-        return _buildDiagonalScroller(minAge, maxAge, itemExtent, isLeft: false);
+        return _buildDiagonalScroller(minAge, maxAge, itemExtent,
+            isLeft: false);
     }
   }
 
@@ -376,18 +378,18 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
                 textAlign: TextAlign.center,
                 style: isSelected
                     ? TextStyle(
-                  // Selected age styling: larger and bold
-                  fontSize: 45.0,
-                  color: widget.selectedTextColor ??
-                      Theme.of(context).colorScheme.primary,
-                  fontWeight: FontWeight.bold,
-                )
+                        // Selected age styling: larger and bold
+                        fontSize: 45.0,
+                        color: widget.selectedTextColor ??
+                            Theme.of(context).colorScheme.primary,
+                        fontWeight: FontWeight.bold,
+                      )
                     : TextStyle(
-                  // Unselected age styling: smaller and normal weight
-                  fontSize: 30.0,
-                  color: widget.unselectedTextColor ?? Colors.black54,
-                  fontWeight: FontWeight.normal,
-                ),
+                        // Unselected age styling: smaller and normal weight
+                        fontSize: 30.0,
+                        color: widget.unselectedTextColor ?? Colors.black54,
+                        fontWeight: FontWeight.normal,
+                      ),
               ),
             );
           },
@@ -466,16 +468,16 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
                     textAlign: TextAlign.center,
                     style: isSelected
                         ? TextStyle(
-                      fontSize: 45.0,
-                      color: widget.selectedTextColor ??
-                          Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                    )
+                            fontSize: 45.0,
+                            color: widget.selectedTextColor ??
+                                Theme.of(context).colorScheme.primary,
+                            fontWeight: FontWeight.bold,
+                          )
                         : TextStyle(
-                      fontSize: 30.0,
-                      color: widget.unselectedTextColor ?? Colors.black54,
-                      fontWeight: FontWeight.normal,
-                    ),
+                            fontSize: 30.0,
+                            color: widget.unselectedTextColor ?? Colors.black54,
+                            fontWeight: FontWeight.normal,
+                          ),
                   ),
                 ),
               );
@@ -519,7 +521,8 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
   /// - Applications with artistic or unconventional design requirements
   ///
   /// Returns a [SizedBox] containing a rotated [ListWheelScrollView].
-  Widget _buildDiagonalScroller(int minAge, int maxAge, double itemExtent, {required bool isLeft}) {
+  Widget _buildDiagonalScroller(int minAge, int maxAge, double itemExtent,
+      {required bool isLeft}) {
     return SizedBox(
       /// Square container to accommodate diagonal rotation
       /// Both dimensions are set to show 5 items for consistent sizing
@@ -563,16 +566,16 @@ class _InfinityAgeScrollerState extends State<InfinityAgeScroller> {
                     textAlign: TextAlign.center,
                     style: isSelected
                         ? TextStyle(
-                      fontSize: 45.0,
-                      color: widget.selectedTextColor ??
-                          Theme.of(context).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                    )
+                            fontSize: 45.0,
+                            color: widget.selectedTextColor ??
+                                Theme.of(context).colorScheme.primary,
+                            fontWeight: FontWeight.bold,
+                          )
                         : TextStyle(
-                      fontSize: 30.0,
-                      color: widget.unselectedTextColor ?? Colors.black54,
-                      fontWeight: FontWeight.normal,
-                    ),
+                            fontSize: 30.0,
+                            color: widget.unselectedTextColor ?? Colors.black54,
+                            fontWeight: FontWeight.normal,
+                          ),
                   ),
                 ),
               );

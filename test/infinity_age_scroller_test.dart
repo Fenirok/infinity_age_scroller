@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:infinity_age_scroller/infinity_age_scroller.dart';
+
 void main() {
   group('InfinityAgeScroller Tests', () {
-    testWidgets('should render with default values', (WidgetTester tester) async {
+    testWidgets('should render with default values',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(
@@ -24,7 +26,8 @@ void main() {
       expect(find.byType(ListWheelScrollView), findsOneWidget);
     });
 
-    testWidgets('should call onAgeSelected callback when scrolled', (WidgetTester tester) async {
+    testWidgets('should call onAgeSelected callback when scrolled',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(
@@ -78,7 +81,8 @@ void main() {
       expect(find.byType(InfinityAgeScroller), findsOneWidget);
     });
 
-    testWidgets('should render horizontal scroller', (WidgetTester tester) async {
+    testWidgets('should render horizontal scroller',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(
@@ -99,7 +103,8 @@ void main() {
       expect(find.byType(RotatedBox), findsAtLeastNWidgets(1));
     });
 
-    testWidgets('should render left diagonal scroller', (WidgetTester tester) async {
+    testWidgets('should render left diagonal scroller',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(
@@ -120,7 +125,8 @@ void main() {
       expect(find.byType(Transform), findsAtLeastNWidgets(1));
     });
 
-    testWidgets('should render right diagonal scroller', (WidgetTester tester) async {
+    testWidgets('should render right diagonal scroller',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(
@@ -218,7 +224,8 @@ void main() {
       expect(find.byType(InfinityAgeScroller), findsOneWidget);
     });
 
-    testWidgets('should handle initial age outside range gracefully', (WidgetTester tester) async {
+    testWidgets('should handle initial age outside range gracefully',
+        (WidgetTester tester) async {
       int? selectedAge;
 
       await tester.pumpWidget(

@@ -112,8 +112,12 @@ class _AgePickerScreenState extends State<AgePickerScreen> {
                             selectedColor: Colors.blue[100],
                             backgroundColor: Colors.grey[200],
                             labelStyle: TextStyle(
-                              color: isSelected ? Colors.blue[800] : Colors.grey[600],
-                              fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+                              color: isSelected
+                                  ? Colors.blue[800]
+                                  : Colors.grey[600],
+                              fontWeight: isSelected
+                                  ? FontWeight.w600
+                                  : FontWeight.normal,
                             ),
                           );
                         }).toList(),
@@ -121,13 +125,17 @@ class _AgePickerScreenState extends State<AgePickerScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(
+                  height: 20,
+                ),
                 Text(
                   'Selected Age: $selectedAge',
                   style: const TextStyle(
                       fontSize: 24, fontWeight: FontWeight.bold),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 SizedBox(
                   height: 500,
                   width: double.infinity,
