@@ -1,4 +1,4 @@
-# InfinityAgeScroller
+# Infinity Age Scroller
 
 [![pub package](https://img.shields.io/pub/v/infinity_age_scroller.svg)](https://pub.dev/packages/infinity_age_scroller)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
